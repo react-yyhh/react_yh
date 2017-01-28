@@ -1,1 +1,1 @@
-export const target = process.env.NODE_ENV !== 'production' ? '' : 'https://cnodejs.org'; //目标网站
+export const target = process.env.NODE_ENV !== 'production' ? '' : 'https://github.com/react-yyhh/react_yh.git'; //目标网站
