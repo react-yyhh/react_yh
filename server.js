@@ -1,8 +1,7 @@
-ar express = require('express');
+var express = require('express');
 var path = require('path');
 var app = express();
 var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
 //配置文件
 var settings = require('./settings');
 var cookieParser = require('cookie-parser');
@@ -10,15 +9,11 @@ var bodyParser = require('body-parser');
 //解析cookie req.cookie
 var cookieParser = require('cookie-parser');
 app.use(express.static(__dirname));
-//导入文件
-require('./db');
-var mongoose = require('mongoose');
-
 //online-API
 // global.API = 'http://114.215.80.72:4545';
 
 //dev-API
-global.API = 'http://localhost:4545';
+global.API = 'http://localhost:3000';
 //加密
 var utils =require('./utils/md5');
 var user = require('./routes/user');
