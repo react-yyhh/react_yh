@@ -2,12 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { Router, Route, IndexRoute, browserHistory, hashHistory } from 'react-router';
 
 //子组件
-
-
-
-
-
-
+import  IndexPage  from '../components/IndexPage';
 
 
 class Roots extends Component{
@@ -26,6 +21,7 @@ const RouteConfig=(
 	<Router history={history}>
 		<Route path="/" component={Roots}>
 			<IndexRoute component={IndexPage} />
+
 		</Route>
 	</Router>		
 );

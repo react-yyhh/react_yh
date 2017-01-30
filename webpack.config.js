@@ -13,14 +13,14 @@ if (process.argv.indexOf('-p') > -1) { //生产环境
             NODE_ENV: JSON.stringify('production')
         }
     }));
-    publicPath = '/react-cnode/dist/';
-    path = __dirname + '/react-cnode/dist/';
+    publicPath = '/react_yh/dist/';
+    path = __dirname + '/react_yh/dist/';
 }
 plugins.push(new ExtractTextPlugin('[name].css')); //css单独打包
 
 plugins.push(new HtmlWebpackPlugin({ //根据模板插入css/js等生成最终HTML
     filename: '../index.html', //生成的html存放路径，相对于 path
-    template: './src/template/index.html', //html模板路径
+    template: './app/template/index.html', //html模板路径
     hash: true,    //为静态资源生成hash值
 }));
 
